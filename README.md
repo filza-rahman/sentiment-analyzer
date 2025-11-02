@@ -26,9 +26,9 @@ Example:
 3. Open a terminal or command prompt in the project folder.
 4. Install the required library:
 ```bash
-pip install -r requirements.txt
+-pip install textblob
 
-Then run the program:
+## Then run the program:
 python sentiment_analyzer.py
 
 
