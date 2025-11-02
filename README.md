@@ -8,8 +8,7 @@ An natural language processing based sentiment analysis tool that classifies use
 - Returns both:
   - **Polarity**: how positive or negative the text is (-1 to +1)
   - **Subjectivity**: how opinionated vs factual the text is (0 to 1)
-- Console-based interactive input (type sentences and see instant results).
-- Optional: Can be extended to analyze multiple reviews from CSV or run as a web app using Streamlit.
+- Very interactive input and entirely console based so it's convenient (type sentences and see instant results).
 
 ---
 
