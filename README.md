@@ -38,8 +38,11 @@ Run the program:
 bash
 
 python sentiment_analyzer.py
+
 ---
+
 Type a sentence and see the sentiment and subjectivity output!
+
 ---
 
 Type "exit" to quit the program.
