@@ -1,0 +1,5 @@
+Sentiment Analyzer - AI/Natural Language Processing project
+
+Library to install:
+
+textblob       # Main library for sentiment analysis
