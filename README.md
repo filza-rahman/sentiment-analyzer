@@ -31,18 +31,8 @@ Example:
 2. Clone or download this repository.
 3. Open a terminal or command prompt in the project folder.
 4. Install the required library:
-```bash
-pip install -r requirements.txt
-Run the program:
+pip install textblob
+5. Run the program: sentiment_analysis.py
+6. Type a sentence to see the sentiment and subjectivity
+7. Type `exit` to quit
 
-bash
-
-python sentiment_analyzer.py
-
----
-
-Type a sentence and see the sentiment and subjectivity output!
-
----
-
-Type "exit" to quit the program.
