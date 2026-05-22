@@ -1,37 +1,66 @@
 # sentiment-analyzer
-An natural language processing based sentiment analysis tool that classifies user text as Positive, Negative, or Neutral. Helpful in assessing social media comments or posts!
+
+An NLP-based sentiment analysis tool that classifies user text as **Positive**, **Negative**, or **Neutral** — originally built as a terminal script, now deployed as an interactive web app.
+
+🔗 **[Live demo](https://filzas-sentiment-analyzer.streamlit.app/)**
 
 ---
 
-## Features
-- Analyze any sentence or short paragraph for sentiment.
-- Returns both:
-  - **Polarity**: how positive or negative the text is (-1 to +1)
-  - **Subjectivity**: how opinionated vs factual the text is (0 to 1)
-- Very interactive input and entirely console based so it's convenient (type sentences and see instant results).
+## What it does
+
+Paste or type any sentence and get back:
+
+- **Sentiment**: Positive, Negative, or Neutral
+- **Polarity**: how positive or negative the text is (−1 to +1)
+- **Subjectivity**: how opinionated vs. factual (0 to 1)
+
+**Examples:**
+| Input | Sentiment | Polarity | Subjectivity |
+|---|---|---|---|
+| `"I love this project!"` | Positive | 0.80 | 0.75 |
+| `"I hate exams."` | Negative | −0.85 | 0.90 |
+| `"It's okay, I guess."` | Neutral | 0.00 | 0.50 |
 
 ---
 
-## How It Works !!
-TextBlob uses a **predefined sentiment lexicon** to evaluate each word in your text:
+## How it works
 
-- **Polarity**: ranges from -1 (very negative) to +1 (very positive)  
-- **Subjectivity**: ranges from 0 (objective/factual) to 1 (opinionated/subjective)  
+TextBlob evaluates each word against a predefined sentiment lexicon to score **polarity** and **subjectivity**, then maps the polarity score to a label:
 
-Example:
-- `"I love this project!"` → Positive (Polarity: 0.8, Subjectivity: 0.75)  
-- `"I hate exams."` → Negative (Polarity: -0.85, Subjectivity: 0.9)  
-- `"It’s okay, I guess."` → Neutral (Polarity: 0.0, Subjectivity: 0.5)  
+- `> 0.15` → Positive
+- `< -0.15` → Negative
+- In between → Neutral
 
 ---
 
-## How to Run
-1. Make sure you have **Python 3.x** installed.
-2. Clone or download this repository.
-3. Open a terminal or command prompt in the project folder.
-4. Install the required library:
-pip install textblob
-5. Run the program: sentiment_analysis.py
-6. Type a sentence to see the sentiment and subjectivity
-7. Type `exit` to quit
+## Files
 
+| File | Description |
+|---|---|
+| `sentiment_analyzer.py` | Original terminal-based script |
+| `app.py` | Streamlit web app version |
+| `requirements.txt` | Dependencies |
+
+---
+
+## Run locally
+
+```bash
+git clone https://github.com/filza-rahman/sentiment-analyzer
+cd sentiment-analyzer
+pip install -r requirements.txt
+
+# Terminal version
+python sentiment_analyzer.py
+
+# Web app version
+streamlit run app.py
+```
+
+---
+
+## Built with
+
+- [Python 3](https://www.python.org/)
+- [TextBlob](https://textblob.readthedocs.io/)
+- [Streamlit](https://streamlit.io/)
